@@ -35,3 +35,7 @@ Route::get('/master', function() {
 Route::get('/', function() {
     return view ('items.index'); //index.blade.php
 });
+
+Route::get('/data-tables', function() {
+    return view ('data-table'); //index.blade.php
+});
