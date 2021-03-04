@@ -17,8 +17,9 @@
 
 Route::get('/home', 'HomeController@home');
 Route::get('/register', 'AuthController@register');
-Route::get('/welcome', 'AuthController@welcome');
-Route::post('/welcome', 'AuthController@welcome_pos');
+// Route::get('/welcome', 'AuthController@welcome');
+// Route::post('/welcome', 'AuthController@welcome_pos');
+Route::post('/welcome', 'AuthController@selamat_datang');
 
 // Route::get('/register', function () {
 //     return view('form');
@@ -27,3 +28,10 @@ Route::post('/welcome', 'AuthController@welcome_pos');
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });
+Route::get('/master', function() {
+    return view ('/adminlte/master'); //master.blade.php
+});
+
+Route::get('/', function() {
+    return view ('items.index'); //index.blade.php
+});
