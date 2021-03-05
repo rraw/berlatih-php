@@ -15,7 +15,11 @@ class CreateLikeDislikePertanyaanTable extends Migration
     {
         Schema::create('like_dislike_pertanyaan', function (Blueprint $table) {
             $table->timestamps();
+
+            $table->unsignedBigInteger('profile_id');
             $table->foreign('profile_id')->references('id')->on('profiles');
+
+            $table->unsignedBigInteger('pertanyaan_id');
             $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan');
             $table->integer('poin');
         });

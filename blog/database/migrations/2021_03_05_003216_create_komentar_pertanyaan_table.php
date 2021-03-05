@@ -19,7 +19,11 @@ class CreateKomentarPertanyaanTable extends Migration
 
             $table->longText('isi');
             $table->date('tanggal_dibuat');
+
+            $table->unsignedBigInteger('profile_id');
             $table->foreign('profile_id')->references('id')->on('profiles');
+
+            $table->unsignedBigInteger('pertanyaan_id');
             $table->foreign('pertanyaan_id')->references('id')->on('pertanyaan');
         });
     }
