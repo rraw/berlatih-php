@@ -39,3 +39,5 @@ Route::get('/', function() {
 Route::get('/data-tables', function() {
     return view ('data-table'); //index.blade.php
 });
+
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
